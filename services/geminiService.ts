@@ -3,7 +3,7 @@ import { GoogleGenAI, GenerateContentResponse } from "@google/genai";
 import { GEMINI_MODEL_NAME } from '../constants';
 import { YouTubeContent } from "../types";
 
-const API_KEY = process.env.API_KEY;
+const apiKey = import.meta.env.VITE_API_KEY;
 
 export async function generateYouTubeContent(topic: string): Promise<YouTubeContent> {
   if (!API_KEY) {
